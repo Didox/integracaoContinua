@@ -6,6 +6,6 @@ context('testar Home Page', () => {
   })
 
   it('deveria mostrar a lista de clientes', () => {
-    cy.get('li').should("to.have.length", 3)
+    cy.get('li').should("to.have.length", 4)
   })
 })

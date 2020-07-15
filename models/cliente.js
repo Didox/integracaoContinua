@@ -7,7 +7,6 @@ module.exports = class Cliente {
     }
 
     static validarCPF(strCPF){
-        return true
         strCPF = strCPF.replace(/\.|\-/g, "")
         var soma;
             var resto;

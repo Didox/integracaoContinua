@@ -7,10 +7,14 @@ describe('Clientes', () => {
     });
 
     test('Deve testar um CPF válido', () => {
-        expect(Cliente.validarCPF("134.841.820-67")).toBe(true);
+        const cliente = new Cliente();
+        cliente.cpf = "134.841.820-67"
+        expect(cliente.validarCPF()).toBe(true);
     });
 
     test('Deve testar um CPF inválido', () => {
-        expect(Cliente.validarCPF("134.841.820-17")).toBe(false);
+        const cliente = new Cliente();
+        cliente.cpf = "134.841.820-17"
+        expect(cliente.validarCPF()).toBe(false);
     });
 })

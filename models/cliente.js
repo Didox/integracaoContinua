@@ -1,13 +1,14 @@
 module.exports = class Cliente {
-    constructor(nome = "", idade = "", email = "") {
+    constructor(nome = "", idade = "", email = "", cpf = "") {
         this.nome = nome;
         this.idade = idade;
         this.email = email;
+        this.cpf = cpf;
         this.dataCadastro = new Date();
     }
 
-    static validarCPF(strCPF){
-        strCPF = strCPF.replace(/\.|\-/g, "")
+    validarCPF(){
+        let strCPF = this.cpf.replace(/\.|\-/g, "")
         var soma;
             var resto;
             soma = 0;
